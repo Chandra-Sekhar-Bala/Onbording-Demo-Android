@@ -2,33 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
-    android:gravity="center"
-    >
-    <ImageView
-        android:id="@+id/img_header"
+    android:gravity="center_horizontal">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:src="@drawable/img2"/>
+        android:layout_height="500dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        />
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:text="No Need to Say Sorry"
+        />
 
     <TextView
-        android:id="@+id/txt_title"
+        android:id="@+id/descriptions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't always look at your device you dummy"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:layout_marginHorizontal="20dp"
-        android:textColor="@color/black"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/deep_grey"
         android:textAlignment="center"
 
         />
     <Button
+        android:id="@+id/btn_continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue"
         android:textAllCaps="false"
+        android:paddingHorizontal="40dp"
         android:layout_marginTop="20dp"
+        android:visibility="invisible"
         android:textColor="@color/black"
         android:background="@drawable/btn_bg"
         />
